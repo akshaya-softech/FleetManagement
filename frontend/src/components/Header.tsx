@@ -6,7 +6,7 @@ const Header = () => {
 
     return(<div className="border-b-2 bg-white-700 py-6">
         <div className="container mx-auto flex justify-between">
-            <span className="text-2xl text-purple-700 font-bold tracking-tight justify-end">
+            <span className="text-3xl text-purple-700 font-bold tracking-tight justify-left">
                 <Link to="/">Fleet Management System</Link>
             </span>
             <div className="md:hidden">
