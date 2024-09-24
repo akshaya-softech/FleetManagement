@@ -6,6 +6,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import Auth0ProviderWithNavigate from './auth/Auth0ProviderWithNavigate';
 import { QueryClient, QueryClientProvider } from "react-query";
 import { Toaster } from 'sonner';
+import { MantineProvider } from '@mantine/core';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -18,6 +19,7 @@ const queryClient = new QueryClient({
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
+    <MantineProvider theme={{ colorScheme: 'light' }}>
     <Router>
       <QueryClientProvider client={queryClient}>
         <Auth0ProviderWithNavigate>
@@ -26,5 +28,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         </Auth0ProviderWithNavigate>
       </QueryClientProvider>
     </Router>
+    </MantineProvider>
   </React.StrictMode>,
 )

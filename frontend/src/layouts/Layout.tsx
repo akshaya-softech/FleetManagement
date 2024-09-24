@@ -11,12 +11,18 @@ type Props = {
 const Layout = ({ children, showSidebar = false }: Props) => {
     return(
         <div className="flex flex-col min-h-screen">
-            <Header />
-            <div className='hidden md:block h-[100vh] w-[300px]'>
+        <Header />
+        <div className="flex h-full">
+            <div className="hidden md:block w-[300px]">
             {showSidebar && <Sidebar />}
             </div>
-            <div className='p-5 w-full md:max-w-[1140px]'>{children}</div>
-            <Footer />            
+            <div className="flex-1 p-5 w-full md:max-w-[1140px]">
+            {children}
+            </div>
+        </div>
+        <div className="mt-11">
+        <Footer />
+        </div>
         </div>
     );
   

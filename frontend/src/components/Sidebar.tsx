@@ -30,7 +30,7 @@ const Sidebar = () => {
         <CommandGroup heading="Inventory">
             <CommandItem>
                 <User className='mr-2 h-4 w-4' />
-                <Link to="/inventory-driver">Driver</Link>
+                <Link to="/list-driver">Driver</Link>
             </CommandItem>
             <CommandItem>
                 <Car className='mr-2 h-4 w-4' />
